@@ -3,4 +3,7 @@
 
 # define READ_SIZE	(20)
 
+char	*get_next_line(const int fd);
+
+
 #endif
