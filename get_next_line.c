@@ -3,8 +3,8 @@
 #include "get_next_line.h"
 
 /*
-** We don't know the final size of the line so we're unable to predict
-** what Data type we'll need ===> "size_t"
+** We don't know the final size of the line so we're unable to predict it
+** What Data type we'll need ? ===> "size_t"
 */
 
 char			*my_realloc(char *line, size_t size_reallocated_line)
@@ -26,9 +26,9 @@ char			*my_realloc(char *line, size_t size_reallocated_line)
 }
 
 /*
-** line will be reallocated only when its size (--) has reached 0, that's is to say
-** we can modify the pointer (++) to catch & check each char
-** So, char will be = to the line 1st char, the *line
+** The line will be reallocated only when its size (--) has reached 0, that's to say
+** we can modify the pointer (++) to catch & check each char.
+** So, char will be = to the line 1ist char, the *line
 */
 
 static char		get_char_by_char(const int fd)
@@ -53,9 +53,9 @@ static char		get_char_by_char(const int fd)
 }
 
 /*
-** If the 1st char is NUL, return NULL
-** We'll catch the file content and check char-by-char the LF or NUL.
-** If the READ_SIZE is smaller than the line size, realloc using the index created in the loop
+** If the 1st char is NULL, return NULL
+** We'll catch the file's content and check char-by-char the LF or NULL.
+** If the READ_SIZE is smaller than the line size, realloc uses the index created in the loop
 ** 
 ** (index % (READ_SIZE + 1) == 0), remember that the remainder of the modulo will be 0 if index
 ** is a multiple of (READ_SIZE + 1) 
